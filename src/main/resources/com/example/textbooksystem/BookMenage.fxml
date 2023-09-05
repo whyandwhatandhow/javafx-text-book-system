@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="670.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textbooksystem.Controller.BookMenageController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="1013.0" style="-fx-background-color: #66b2ff;">
+         <children>
+            <Label layoutX="35.0" layoutY="17.0" prefHeight="49.0" prefWidth="183.0" text="教材管理系统" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="BookTable" layoutX="152.0" layoutY="151.0" prefHeight="368.0" prefWidth="723.0">
+        <columns>
+          <TableColumn fx:id="Cbook_id" prefWidth="75.0" text="教材编号" />
+          <TableColumn fx:id="Cbook_name" prefWidth="75.0" text="教材名称" />
+            <TableColumn fx:id="Cpublish" prefWidth="75.0" text="出版社" />
+            <TableColumn fx:id="Cuser_id" prefWidth="75.0" text="管理员编号" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="Abook_id" layoutX="136.0" layoutY="544.0" prefHeight="36.0" prefWidth="114.0" promptText="id" />
+      <TextField fx:id="Aname" layoutX="271.0" layoutY="544.0" prefHeight="36.0" prefWidth="114.0" promptText="name" />
+      <TextField fx:id="Apublish" layoutX="417.0" layoutY="544.0" prefHeight="36.0" prefWidth="114.0" promptText="publish" />
+      <TextField fx:id="Auser_id" layoutX="556.0" layoutY="544.0" prefHeight="36.0" prefWidth="114.0" promptText="user_id" />
+      <Button fx:id="AddButton" layoutX="749.0" layoutY="544.0" mnemonicParsing="false" onAction="#AddOnAction" style="-fx-background-color: #66b2ff;" text="确认添加" textFill="WHITE" />
+      <Button fx:id="CancelButton" layoutX="839.0" layoutY="603.0" mnemonicParsing="false" onAction="#CancelOnAction" style="-fx-background-color: #66b2ff;" text="退出" textFill="WHITE" />
+      <Button fx:id="LinkDataBase" layoutX="899.0" layoutY="104.0" mnemonicParsing="false" onAction="#LinkOnAction" style="-fx-background-color: #66b2ff;" text="检索" textFill="WHITE" />
+   </children>
+</AnchorPane>
